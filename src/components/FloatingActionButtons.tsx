@@ -1,4 +1,5 @@
 import React from "react";
+import "./FloatingActionButtons.css";
 
 interface FloatingActionButtonsProps {
   selectedCount: number;

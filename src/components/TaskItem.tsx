@@ -1,5 +1,6 @@
 import { Task } from "../types/task";
 import { TaskDates } from "./DateDisplay";
+import "./TaskItem.css";
 
 type Props = {
   task: Task;

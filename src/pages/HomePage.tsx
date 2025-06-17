@@ -5,6 +5,7 @@ import { TaskFormModal } from "../components/TaskFormModal";
 import { TaskList } from "../components/TaskList";
 import { useTasks } from "../hooks/useTasks";
 import { Task } from "../types/task";
+import "./HomePage.css";
 
 export const HomePage = () => {
   const { tasks, loading, addTask, removeTask, editTask, finishTask } = useTasks();
@@ -108,7 +109,7 @@ export const HomePage = () => {
       <main className="page-content">
         {loading ? (
           <div className="loading-state">
-            <div className="loading-spinner">⏳</div>
+            <div className="loading-spinner" />
             <p>Carregando tasks...</p>
           </div>
         ) : (

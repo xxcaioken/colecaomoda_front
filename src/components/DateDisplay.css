@@ -1,0 +1,43 @@
+/* DateDisplay Component Styles */
+
+.date-display {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #666;
+  padding: 0.2vh 0.4vw;
+  background-color: #f5f5f5;
+  border-radius: 0.3vh;
+  display: inline-block;
+}
+
+.task-dates {
+  margin: 0.8vh 0;
+  padding: 0.8vh;
+  background-color: #fafafa;
+  border-radius: 0.4vh;
+  border-left: 0.3vw solid #e0e0e0;
+}
+
+.task-dates .created-date,
+.task-dates .updated-date {
+  margin: 0.2vh 0;
+  font-size: 0.85em;
+}
+
+.task-dates strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsividade para DateDisplay */
+@media (max-width: 480px) {
+  .task-dates {
+    font-size: 0.8em;
+    padding: 0.6vh;
+  }
+  
+  .date-display {
+    font-size: 0.8em;
+    padding: 0.1vh 0.3vw;
+  }
+} 

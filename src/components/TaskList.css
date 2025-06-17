@@ -1,0 +1,156 @@
+/* TaskList Component Styles */
+
+.task-list-container {
+  background-color: #fff;
+  border-radius: 0.8vh;
+  padding: 2vh;
+  box-shadow: 0 0.2vh 0.4vh rgba(0,0,0,0.1);
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.1vh solid #e0e0e0;
+}
+
+.select-all-container {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.select-all-checkbox {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.select-all-label {
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.selection-summary {
+  font-size: 0.9em;
+}
+
+.selection-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 0.4vh 0.8vw;
+  border-radius: 1vh;
+  font-weight: 500;
+  margin-left: 0.5vw;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.selection-indicator {
+  position: fixed;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: white;
+  padding: 1vh 2vw;
+  border-radius: 2vh;
+  box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.15);
+}
+
+.selection-count {
+  font-weight: 600;
+  margin-right: 0.5vw;
+}
+
+/* Estados especiais */
+.loading-state {
+  text-align: center;
+  padding: 4vh 0;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 4vh;
+  height: 4vh;
+  border: 0.3vh solid #f3f3f3;
+  border-top: 0.3vh solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 2vh;
+  position: relative;
+}
+
+/* Spinner alternativo com pontos */
+.loading-dots {
+  display: inline-block;
+  margin: 0 auto 2vh;
+}
+
+.loading-dots::after {
+  content: "⏳ Carregando";
+  animation: dots 1.5s infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dots {
+  0%, 20% { content: "⏳ Carregando"; }
+  40% { content: "⏳ Carregando."; }
+  60% { content: "⏳ Carregando.."; }
+  80%, 100% { content: "⏳ Carregando..."; }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 6vh 2vw;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 4em;
+  margin-bottom: 2vh;
+}
+
+.empty-state h3 {
+  color: #333;
+  margin-bottom: 1vh;
+}
+
+/* Responsividade para TaskList */
+@media (max-width: 768px) {
+  .task-list-header {
+    flex-direction: column;
+    gap: 1vh;
+    align-items: flex-start;
+  }
+  
+  .select-all-checkbox,
+  .task-select-checkbox {
+    transform: scale(1.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .select-all-checkbox,
+  .task-select-checkbox {
+    transform: scale(1.4);
+  }
+  
+  .selection-indicator {
+    bottom: 12vh;
+    padding: 0.8vh 1.5vw;
+  }
+} 
