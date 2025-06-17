@@ -3,22 +3,22 @@
   font-family: monospace;
   font-size: 0.9em;
   color: #666;
-  padding: 2px 4px;
+  padding: 0.2vh 0.4vw;
   background-color: #f5f5f5;
-  border-radius: 3px;
+  border-radius: 0.3vh;
 }
 
 .task-dates {
-  margin: 8px 0;
-  padding: 8px;
+  margin: 0.8vh 0;
+  padding: 0.8vh;
   background-color: #fafafa;
-  border-radius: 4px;
-  border-left: 3px solid #e0e0e0;
+  border-radius: 0.4vh;
+  border-left: 0.3vw solid #e0e0e0;
 }
 
 .task-dates .created-date,
 .task-dates .updated-date {
-  margin: 2px 0;
+  margin: 0.2vh 0;
 }
 
 .task-dates strong {
@@ -166,19 +166,19 @@ h1 {
 .homepage {
   min-height: 100vh;
   background-color: #f8f9fa;
-  padding-bottom: 100px; /* Espaço para FABs */
+  padding-bottom: 10vh; /* Espaço para FABs */
 }
 
 .page-header {
   background: linear-gradient(135deg, #667eea 30%, #007bff 85%);
   color: white;
-  padding: 40px 20px;
+  padding: 4vh 2vw;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
 }
 
 .page-header h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 1vh 0;
   font-size: 2.5em;
   font-weight: 300;
 }
@@ -190,20 +190,20 @@ h1 {
 }
 
 .page-content {
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2vw;
 }
 
 /* Estados de carregamento e vazio */
 .loading-state {
   text-align: center;
-  padding: 60px 20px;
+  padding: 6vh 2vw;
 }
 
 .loading-spinner {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   animation: spin 2s linear infinite;
 }
 
@@ -214,32 +214,32 @@ h1 {
 
 .empty-state {
   text-align: center;
-  padding: 60px 20px;
+  padding: 6vh 2vw;
   color: #666;
 }
 
 .empty-icon {
   font-size: 4em;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .empty-state h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 1vh 0;
   color: #333;
 }
 
 /* Lista de tasks */
 .task-list-container {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 1.2vh;
+  box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
   overflow: hidden;
 }
 
 .task-list-header {
-  padding: 20px;
+  padding: 2vh;
   background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 0.1vh solid #e9ecef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -248,12 +248,12 @@ h1 {
 .select-all-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1.2vw;
 }
 
 .select-all-checkbox {
-  width: 18px;
-  height: 18px;
+  width: 1.8vw;
+  height: 1.8vh;
   cursor: pointer;
 }
 
@@ -272,8 +272,8 @@ h1 {
 .selection-badge {
   background-color: #007bff;
   color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 0.6vh 1.2vw;
+  border-radius: 2vh;
   font-size: 0.9em;
   font-weight: 600;
 }
@@ -283,14 +283,15 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-inline: 1vw;
 }
 
 .task-item {
-  padding: 20px;
-  border-bottom: 1px solid #e9ecef;
+  padding: 2vh;
+  border-bottom: 0.1vh solid #e9ecef;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 1.5vw;
   transition: background-color 0.2s;
 }
 
@@ -300,7 +301,7 @@ h1 {
 
 .task-item.selected {
   background-color: #e3f2fd;
-  border-left: 4px solid #2196f3;
+  border-left: 0.4vw solid #2196f3;
 }
 
 .task-item.completed {
@@ -313,22 +314,22 @@ h1 {
 }
 
 .task-checkbox {
-  padding-top: 2px;
+  padding-top: 0.2vh;
 }
 
 .task-select-checkbox {
-  width: 18px;
-  height: 18px;
+  width: 1.8vw;
+  height: 1.8vh;
   cursor: pointer;
 }
 
 .task-status {
-  padding-top: 2px;
+  padding-top: 0.2vh;
 }
 
 .status-badge {
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: 0.4vh 0.8vw;
+  border-radius: 1.2vh;
   font-size: 0.8em;
   font-weight: 600;
 }
@@ -346,32 +347,32 @@ h1 {
 /* Floating Action Buttons */
 .fab-container {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 3vh;
+  right: 3vw;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5vh;
   z-index: 1000;
 }
 
 .fab {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
+  gap: 1vw;
+  padding: 1.5vh 2vw;
   border: none;
-  border-radius: 28px;
+  border-radius: 2.8vh;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9em;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.2);
   transition: all 0.3s ease;
-  min-width: 60px;
+  min-width: 6vw;
 }
 
 .fab:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transform: translateY(-0.2vh);
+  box-shadow: 0 0.6vh 2vh rgba(0,0,0,0.3);
 }
 
 .fab-primary {
@@ -402,8 +403,8 @@ h1 {
 .selection-indicator {
   background-color: #333;
   color: white;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 1vh 1.5vw;
+  border-radius: 2vh;
   text-align: center;
   font-size: 0.8em;
 }
@@ -426,22 +427,22 @@ h1 {
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  padding: 20px;
+  padding: 2vh;
 }
 
 .modal-content {
   background: white;
-  border-radius: 12px;
-  max-width: 500px;
+  border-radius: 1.2vh;
+  max-width: 50vw;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 1vh 3vh rgba(0,0,0,0.3);
 }
 
 .modal-header {
-  padding: 20px 30px;
-  border-bottom: 1px solid #e9ecef;
+  padding: 2vh 3vw;
+  border-bottom: 0.1vh solid #e9ecef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -460,8 +461,8 @@ h1 {
   color: #666;
   cursor: pointer;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 3vw;
+  height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,20 +475,20 @@ h1 {
 }
 
 .modal-body {
-  padding: 30px;
+  padding: 3vh;
 }
 
 /* Formulário */
 .task-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2vh;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.8vh;
 }
 
 .form-group label {
@@ -497,9 +498,9 @@ h1 {
 
 .form-input,
 .form-textarea {
-  padding: 12px;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
+  padding: 1.2vh;
+  border: 0.2vh solid #e9ecef;
+  border-radius: 0.8vh;
   font-size: 1em;
   transition: border-color 0.2s;
 }
@@ -508,27 +509,27 @@ h1 {
 .form-textarea:focus {
   outline: none;
   border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+  box-shadow: 0 0 0 0.3vh rgba(0,123,255,0.1);
 }
 
 .form-textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 10vh;
   font-family: inherit;
 }
 
 .form-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 1.2vw;
+  margin-top: 1vh;
 }
 
 .btn-primary {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 1.2vh 2.4vw;
+  border-radius: 0.6vh;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.2s;
@@ -548,8 +549,8 @@ h1 {
   background-color: #6c757d;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 1.2vh 2.4vw;
+  border-radius: 0.6vh;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.2s;
@@ -562,7 +563,7 @@ h1 {
 /* Responsividade */
 @media (max-width: 768px) {
   .page-header {
-    padding: 30px 15px;
+    padding: 3vh 1.5vw;
   }
   
   .page-header h1 {
@@ -570,18 +571,19 @@ h1 {
   }
   
   .page-content {
-    padding: 0 15px;
+    max-width: 95vw;
+    padding: 0 1.5vw;
   }
   
   .task-list-header {
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5vh;
     align-items: flex-start;
   }
   
   .fab-container {
-    bottom: 20px;
-    right: 20px;
+    bottom: 2vh;
+    right: 2vw;
   }
   
   .fab-text {
@@ -589,29 +591,50 @@ h1 {
   }
   
   .fab {
-    width: 56px;
-    height: 56px;
+    width: 14vw;
+    height: 14vw;
     padding: 0;
     justify-content: center;
     border-radius: 50%;
+    min-width: auto;
+  }
+  
+  .modal-content {
+    max-width: 90vw;
   }
   
   .modal-backdrop {
-    padding: 10px;
+    padding: 1vh;
   }
   
   .modal-body {
-    padding: 20px;
+    padding: 2vh;
   }
   
   .form-actions {
     flex-direction: column;
+    gap: 1vh;
+  }
+  
+  .select-all-checkbox,
+  .task-select-checkbox {
+    width: 4vw;
+    height: 4vw;
+  }
+  
+  .task-item {
+    gap: 3vw;
+  }
+  
+  .modal-close-btn {
+    width: 8vw;
+    height: 8vw;
   }
 }
 
 @media (max-width: 480px) {
   .task-item {
-    padding: 15px;
+    padding: 1.5vh;
   }
   
   .task-content h4 {
@@ -620,5 +643,31 @@ h1 {
   
   .task-content p {
     font-size: 0.9em;
+  }
+  
+  .fab {
+    width: 16vw;
+    height: 16vw;
+  }
+  
+  .page-content {
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+  
+  .select-all-checkbox,
+  .task-select-checkbox {
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  .modal-close-btn {
+    width: 10vw;
+    height: 10vw;
+  }
+  
+  .task-dates {
+    padding: 1vh;
+    margin: 1vh 0;
   }
 }
