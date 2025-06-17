@@ -112,7 +112,7 @@ export async function deleteTask(id: string): Promise<void> {
 export async function completeTask(id: string): Promise<Task> {
   try {
     const response = await fetch(`${API_BASE_URL}/tasks/${id}/complete`, {
-      method: 'PATCH',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       }
