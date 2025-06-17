@@ -1,4 +1,5 @@
 import { Task } from '../types/task'
+import { getCurrentISOString } from '../utils/dateUtils'
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:4000/api'
 
@@ -28,8 +29,8 @@ export async function createTask(title: string, description: string): Promise<Ta
         title,
         description,
         completed: false,
-        inserted_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        inserted_at: getCurrentISOString(),
+        updated_at: getCurrentISOString()
       }
     })
   })
@@ -49,7 +50,7 @@ export async function updateTask(task: Task): Promise<Task> {
         title: task.title,
         description: task.description,
         completed: task.completed,
-        updatedAt: new Date().toISOString()
+        updated_at: getCurrentISOString()
       }
     })
   })

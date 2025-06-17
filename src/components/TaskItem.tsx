@@ -1,4 +1,5 @@
 import { Task } from "../types/task";
+import { TaskDates } from "./DateDisplay";
 
 type Props = {
   task: Task;
@@ -9,14 +10,26 @@ type Props = {
 
 export function TaskItem({ task, onDelete, onEdit, onComplete }: Props) {
   return (
-    <li style={{ textDecoration: task.completed ? "line-through" : "none" }}>
-      <div>{task.title}</div>
-      <div>{task.description}</div>
-      <div>Created: {task.inserted_at}</div>
-      <div>Updated: {task.updated_at}</div>
-      <button onClick={() => onComplete(task.id)}>Complete</button>
-      <button onClick={() => onEdit(task)}>Edit</button>
-      <button onClick={() => onDelete(task.id)}>Delete</button>
+    <li className={`task-item ${task.completed ? "completed" : ""}`}>
+      <div className="task-content">
+        <h4>{task.title}</h4>
+        <p>{task.description}</p>
+        <TaskDates insertedAt={task.inserted_at} updatedAt={task.updated_at} className="task-dates-info" />
+      </div>
+
+      <div className="task-actions">
+        <button onClick={() => onComplete(task.id)} className="complete-btn">
+          {task.completed ? "Reabrir" : "Completar"}
+        </button>
+
+        <button onClick={() => onEdit(task)} className="edit-btn">
+          Editar
+        </button>
+
+        <button onClick={() => onDelete(task.id)} className="delete-btn">
+          Deletar
+        </button>
+      </div>
     </li>
   );
 }
