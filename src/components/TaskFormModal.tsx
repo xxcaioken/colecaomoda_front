@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Task } from "../types/task";
 
 interface TaskFormModalProps {
-  task?: Task | null; // Se for null/undefined = adicionar, se tiver valor = editar
+  task?: Task | null;
   onSave: (title: string, description: string) => void;
   onCancel: () => void;
 }

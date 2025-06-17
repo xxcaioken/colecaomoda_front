@@ -9,15 +9,12 @@ import { Task } from "../types/task";
 export const HomePage = () => {
   const { tasks, loading, addTask, removeTask, editTask, finishTask } = useTasks();
 
-  // Estados para seleção múltipla
   const [selectedTasks, setSelectedTasks] = useState<string[]>([]);
 
-  // Estados do modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"add" | "edit">("add");
   const [taskToEdit, setTaskToEdit] = useState<Task | null>(null);
 
-  // Funções de seleção
   const handleSelectTask = (id: string, selected: boolean) => {
     if (selected) {
       setSelectedTasks(prev => [...prev, id]);
@@ -34,7 +31,6 @@ export const HomePage = () => {
     }
   };
 
-  // Funções dos FABs
   const handleAddTask = () => {
     setModalType("add");
     setTaskToEdit(null);
@@ -60,7 +56,6 @@ export const HomePage = () => {
 
     if (window.confirm(confirmMessage)) {
       try {
-        // Deletar todas as tasks selecionadas
         await Promise.all(selectedTasks.map(taskId => removeTask(taskId)));
         setSelectedTasks([]);
       } catch (error) {
@@ -74,7 +69,6 @@ export const HomePage = () => {
     if (selectedTasks.length === 0) return;
 
     try {
-      // Alternar status de todas as tasks selecionadas
       await Promise.all(selectedTasks.map(taskId => finishTask(taskId)));
       setSelectedTasks([]);
     } catch (error) {
@@ -83,7 +77,6 @@ export const HomePage = () => {
     }
   };
 
-  // Funções do modal
   const handleSaveTask = async (title: string, description: string) => {
     try {
       if (modalType === "add") {
@@ -123,7 +116,6 @@ export const HomePage = () => {
         )}
       </main>
 
-      {/* Floating Action Buttons */}
       <FloatingActionButtons
         selectedCount={selectedTasks.length}
         onAdd={handleAddTask}
@@ -132,7 +124,6 @@ export const HomePage = () => {
         onComplete={handleToggleComplete}
       />
 
-      {/* Modal para adicionar/editar tasks */}
       <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}

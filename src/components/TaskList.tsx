@@ -29,7 +29,6 @@ export function TaskList({ tasks, selectedTasks, onSelectTask, onSelectAll }: Pr
 
   return (
     <div className="task-list-container">
-      {/* Header com seleção global */}
       <div className="task-list-header">
         <div className="select-all-container">
           <input
@@ -59,7 +58,6 @@ export function TaskList({ tasks, selectedTasks, onSelectTask, onSelectAll }: Pr
         )}
       </div>
 
-      {/* Lista de tasks */}
       <ul className="task-list">
         {tasks.map(task => (
           <TaskItem key={task.id} task={task} isSelected={selectedTasks.includes(task.id)} onSelect={onSelectTask} />

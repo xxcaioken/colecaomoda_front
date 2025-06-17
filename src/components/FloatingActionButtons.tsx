@@ -20,16 +20,13 @@ export const FloatingActionButtons: React.FC<FloatingActionButtonsProps> = ({
 
   return (
     <div className="fab-container">
-      {/* Botão principal de adicionar - sempre visível */}
       <button className="fab fab-primary" onClick={onAdd} title="Adicionar nova task">
         <span className="fab-icon">+</span>
         <span className="fab-text">Adicionar</span>
       </button>
 
-      {/* Botões que aparecem quando há seleção */}
       {hasSelection && (
         <>
-          {/* Botão de editar - apenas para seleção única */}
           {singleSelection && (
             <button className="fab fab-edit" onClick={onEdit} title="Editar task selecionada">
               <span className="fab-icon">✏️</span>
@@ -37,13 +34,11 @@ export const FloatingActionButtons: React.FC<FloatingActionButtonsProps> = ({
             </button>
           )}
 
-          {/* Botão de completar/reabrir */}
           <button className="fab fab-complete" onClick={onComplete} title={`Alterar status de ${selectedCount} task(s)`}>
             <span className="fab-icon">✓</span>
             <span className="fab-text">{selectedCount === 1 ? "Status" : `Status (${selectedCount})`}</span>
           </button>
 
-          {/* Botão de deletar */}
           <button className="fab fab-delete" onClick={onDelete} title={`Deletar ${selectedCount} task(s) selecionada(s)`}>
             <span className="fab-icon">🗑️</span>
             <span className="fab-text">{selectedCount === 1 ? "Deletar" : `Deletar (${selectedCount})`}</span>
@@ -51,7 +46,6 @@ export const FloatingActionButtons: React.FC<FloatingActionButtonsProps> = ({
         </>
       )}
 
-      {/* Indicador de seleção */}
       {hasSelection && (
         <div className="selection-indicator">
           <span className="selection-count">{selectedCount}</span>
