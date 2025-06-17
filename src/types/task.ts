@@ -3,6 +3,6 @@ export type Task = {
     title: string
     description: string
     completed: boolean
-    createdAt: string
-    updatedAt: string
+    inserted_at : string
+    updated_at : string
 }

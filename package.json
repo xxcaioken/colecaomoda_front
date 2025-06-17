@@ -19,8 +19,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:debug": "GENERATE_SOURCEMAP=true react-scripts start",
     "build": "react-scripts build",
+    "build:debug": "GENERATE_SOURCEMAP=true react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts test --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
